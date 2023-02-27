@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "../interfaces/IERC20.sol";
-import "./extensions/IERC20Metadata.sol";
+import "../extensions/IERC20Metadata.sol";
 import "../utils/Context.sol";
 
 /**
