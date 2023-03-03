@@ -64,7 +64,7 @@ contract Madpunk is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     // struct to store avatar token info
     struct SaleInfo {
         uint256 price;
-        uint8 currencyType; // store currency type: 0 for punkCoin, 1 for TRX
+        uint8 currencyType; // store currency type: 0 for punkCoin, 1 for FTM
         bool sale;
         address creator;
         uint8[] condition; // store condition of token: i.e which listed token or tokens of creator is required to buy this token - only for item NFT.
@@ -366,7 +366,7 @@ contract Madpunk is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         } else {
             require(
                 msg.value >= saleInfo[tokenId].price,
-                "Insufficient TRX balance"
+                "Insufficient FTM balance"
             );
 
             // send 2% of the sale price to governance wallet

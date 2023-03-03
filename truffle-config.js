@@ -1,4 +1,5 @@
 require('dotenv').config();
+const BigNumber = require('bignumber.js');
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
@@ -19,8 +20,8 @@ module.exports = {
         ),
       network_id: 4002, // This network is yours, in the cloud.
       production: false, // Treats this network as if it was a public net. (default: false),
-      gas: 700000,
-      timeoutBlocks: 200
+      gas: new BigNumber(70000000000000000000000000),
+      timeoutBlocks: 2000000
     },
     opera_mainnet: {
       provider: () =>
