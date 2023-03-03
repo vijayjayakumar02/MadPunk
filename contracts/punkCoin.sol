@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./common/ERC20.sol";
-import "./common/ERC20Burnable.sol";
-import "./security/Pausable.sol";
-import "./access/AccessControl.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
 
 
 contract PunkCoin is ERC20, ERC20Burnable, Pausable, AccessControl {
